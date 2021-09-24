@@ -9,6 +9,7 @@ import Contact from'./Contact';
 import Footer from'./Footer';
 
 import Navbar from './Navbar';
+import Sidebar from './Sidebar';
 
 import { 
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <Router>
       <Navbar />
+      <Sidebar />
         {/* <Header/>
         <About/>
         <Project/>
