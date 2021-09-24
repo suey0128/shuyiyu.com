@@ -8,6 +8,8 @@ import Blog from'./Blog';
 import Contact from'./Contact';
 import Footer from'./Footer';
 
+import Navbar from './Navbar';
+
 import { 
   BrowserRouter as Router,
   Switch, 
@@ -17,17 +19,18 @@ import React, { useEffect } from "react";
 
 export default function App() {
   return (
-    <div className="app">
-        <Header/>
+    <Router>
+      <Navbar />
+        {/* <Header/>
         <About/>
         <Project/>
         <Experience/>
         <Passion/>
         <Blog/>
         <Contact/>
-        <Footer/>
+        <Footer/> */}
 
-    </div>
+    </Router>
   );
 }
 
