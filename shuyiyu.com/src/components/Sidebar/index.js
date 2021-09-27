@@ -7,7 +7,7 @@ import {
     SidebarLink,
 } from './SidebarElements'
 
-const Sidebar = () => {
+const Sidebar = ({ setIsOpen }) => {
     return (
         <SidebarContainer>
             <Icon>

@@ -12,7 +12,7 @@ import logo from '../../assets/webprojectLOGO.png';
 
 
 
-const Navbar = () => {
+const Navbar = ({ setIsOpen }) => {
     return (
         <>
             <Nav>

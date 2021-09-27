@@ -10,6 +10,7 @@ import Footer from'./Footer';
 
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import { useState } from 'react';
 
 import { 
   BrowserRouter as Router,
@@ -19,10 +20,13 @@ import {
 import React, { useEffect } from "react";
 
 export default function App() {
+
+  const [ isOpen, setIsOpen ] = useState(false)
+
   return (
     <Router>
-      <Navbar />
-      <Sidebar />
+      <Navbar setIsOpen={setIsOpen}/>
+      <Sidebar setIsOpen={setIsOpen}/>
         {/* <Header/>
         <About/>
         <Project/>
