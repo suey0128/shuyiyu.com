@@ -15,13 +15,7 @@ export const SidebarContainer = styled.aside`
     transition: 0.3s ease-in-out;
     opacity: 0;
     top: -100%
-    // opacity: ${ isOpen  => (isOpen ?  '100%' : '0')}
-    // top: ${ isOpen  => (isOpen ? '0' : '-100%')}
-
 `;
-    // top: 0;
-    // opacity: ${({ isOpen }) => (isOpen ?  '100%' : '0')}
-    // top: ${({ isOpen }) => (isOpen ? '0' : '-100%')}
 
 export const Icon = styled.div`
     position: absolute;
@@ -58,7 +52,7 @@ export const SidebarLink = styled(LinkScroll)`
     list-style:none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: e5b7a8;
+    color: #e5b7a8;
     cursor: pointer;
 
     &:hover {

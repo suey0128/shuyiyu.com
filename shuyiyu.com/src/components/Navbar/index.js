@@ -13,6 +13,7 @@ import logo from '../../assets/webprojectLOGO.png';
 
 
 const Navbar = ({ setIsOpen }) => {
+
     return (
         <>
             <Nav>
@@ -42,7 +43,7 @@ const Navbar = ({ setIsOpen }) => {
                     </NavLogo>
 
                     <MibileIcon>
-                        <FaBars />
+                        <FaBars onClick={()=>{setIsOpen(true)}}/>
                     </MibileIcon>
 
                     <NavMenu>
