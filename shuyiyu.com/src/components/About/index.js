@@ -3,7 +3,11 @@ import Video from '../../assets/videos/video.mp4'
 import { 
     AboutContainer,
     AboutBg,
-    VideoBg
+    VideoBg,
+    AboutContent,
+    AboutH2,
+    AboutH1,
+    AboutP,
 } from './AboutElements'
 
 const About = () => {
@@ -13,17 +17,15 @@ const About = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </AboutBg>
 
-            {/* <AboutContentContainer>
-                <AboutImghContainer>
-                    <AboutImg />
-                </AboutImghContainer>
+            <AboutContent>
+                <AboutH2>Software Engineer</AboutH2>
+                <AboutH1>Shuyi Yu</AboutH1>
+                <AboutP>👉 JavaScript | React | Redux | Ruby | Rails | Postgres | HTML | CSS | Git | Zsh 👈 
+                    <br/>   
+                    Have fun viewing my profile and hope to hear from you.
+                </AboutP>
+            </AboutContent>
 
-                <AboutRightContainer>
-                    <AboutH1> Software Engineer</AboutH1>
-                    <AboutP> whatever blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</AboutP>
-                </AboutRightContainer>
-
-            </AboutContentContainer> */}
         </AboutContainer >
     )
 }
