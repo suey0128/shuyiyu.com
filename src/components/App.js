@@ -1,4 +1,5 @@
 import '../assets/App.css';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import { 
   BrowserRouter as Router,
@@ -12,6 +13,7 @@ export default function App() {
 
   return (
     <Router>
+      <CssBaseline />
       <Home />
     </Router>
   );
