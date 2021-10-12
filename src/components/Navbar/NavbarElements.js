@@ -51,7 +51,7 @@ export const MibileIcon = styled.div`
         right: 0;
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
-        cursor; pointer;
+        cursor: pointer;
         color: #e5b7a8;
     }
 `
