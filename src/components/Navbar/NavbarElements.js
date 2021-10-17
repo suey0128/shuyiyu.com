@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import {Link as LinkRouter } from 'react-router-dom';
 import {Link as LinkScroll } from 'react-scroll';
 
+const green = '#253f36'; 
+const pink = '#e5b7a8'; 
+const orange = "#ff7d5b";
+
 export const Nav = styled.nav`
     background: #253f36;
     height: 80px;
@@ -21,7 +25,7 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 80;
     z-index: 1;
     width: 100%;
@@ -29,7 +33,7 @@ export const NavbarContainer = styled.div`
     max-width: 1100px;
 `
 
-export const NavLogo = styled(LinkRouter)`
+export const NavLogo = styled(LinkScroll)`
     color:#e5b7a8;
     justify-self: flex-start;
     cursor: pointer;
@@ -81,14 +85,11 @@ export const NavLinks = styled(LinkScroll)`
     cursor: pointer;
     font-size: 1rem;
 
-    &.active {
-        border-bottom: 3px solid #e5b7a8;
+    &:active {
+        color:${orange};
+    }
+
+    &:hover {
+        color:${orange};
     }
 `
-
-
-
-// export const Logo = styled.img`
-//     width: 50px;
-//     height: 30px;
-// `

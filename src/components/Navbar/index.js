@@ -28,16 +28,14 @@ const Navbar = ({ setIsOpen }) => {
                             <NavLinks to='past' >Past</NavLinks>
                         </NavItem>
 
-                        <NavItem>
+                        {/* <NavItem>
                             <NavLinks to='passion' >Passion</NavLinks>
-                        </NavItem>
+                        </NavItem> */}
 
                     </NavMenu>
 
 
-                    <NavLogo to='/'>
-                        {/* <img id='header-logo' src={logo}  alt="S"/> */}
-                        {/* <Logo src={logo}  alt="S"/> */}
+                    <NavLogo to='about'>
                         S
                     </NavLogo>
 
@@ -50,9 +48,9 @@ const Navbar = ({ setIsOpen }) => {
                             <NavLinks to='about' >About</NavLinks>
                         </NavItem>
 
-                        <NavItem>
+                        {/* <NavItem>
                             <NavLinks to='blog' >Blog</NavLinks>
-                        </NavItem>
+                        </NavItem> */}
 
                         <NavItem>
                             <NavLinks to='contact' >Contact</NavLinks>

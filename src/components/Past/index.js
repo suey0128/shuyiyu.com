@@ -23,7 +23,7 @@ import React from 'react'
 
 const Past = () => {
     return (
-        <PastSectionContainer>
+        <PastSectionContainer id='past'>
             <PastBg>
                 <ImgBg src={backgroundPhoto} alt="background"/>
             </PastBg>
