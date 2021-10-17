@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import About from '../components/About'
-import Navbar from '../components/Navbar'
-import Sidebar from '../components/Sidebar'
-import Project from '../components/Project'
+import React, { useState } from 'react';
+import About from '../components/About';
+import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
+import Project from '../components/Project';
+import Past from '../components/Past';
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
             <Sidebar setIsOpen={setIsOpen} isOpen={isOpen}/>
             <About />
             <Project />
+            <Past />
         </>
     )
 }
