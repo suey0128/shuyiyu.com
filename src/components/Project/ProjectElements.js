@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 
-const green = "#253f36";
-const pink = "#e5b7a8";
+const green = "#253f36"; // green
+const pink = "#e5b7a8"; // pink
 const orange = "#ff7d5b"
 
 export const ProjectSectionContainer = styled.div`
-    background: ${green};
+    background: ${pink};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,8 +19,8 @@ export const ProjectSectionContainer = styled.div`
 `
 
 export const ProjectContainer = styled.div`
-    margin-bottom: 25px;
-    background: ${pink};
+    margin-bottom: 30px;
+    background: ${green};
     width: 100%;
     border-radius: 20px;  
     display: flex;
@@ -38,7 +38,7 @@ export const ProjectContainer = styled.div`
 export const ProjectSectionTitle = styled.h1`
     font-size: 48px;
     margin-bottom: 30px;
-    color: ${pink};
+    color: ${green};
 
     @media screen and (max-width: 768px) {
         font-size: 40px;
@@ -64,18 +64,18 @@ export const ProjectImg = styled.img`
 `  
 
 export const ProjectTitle = styled.h2`
-    color: ${green};
+    color: ${pink};
 `
 
 export const ProjectP = styled.p`
-    color: ${green};
+    color: ${pink};
     margin-bottom: 10px;
     font-size: 17px;
 `
 
 export const ProjectUl = styled.ul`
     list-style: inside;
-    color: ${green};
+    color: ${pink};
     padding: 0;
     font-size: 15px;
 `
@@ -85,7 +85,7 @@ export const ProjectBarGrid = styled.div`
 `
 
 export const ProjectH4 = styled.h4`
-    color: ${green};
+    color: ${pink};
     text-align: center;
     margin-bottom:5px;
 `
@@ -137,7 +137,7 @@ export const ProjectCategoryLi = styled.li`
     padding: .5em 1em;
     line-height: 1em;
     font-size: 12px;
-    color: ${green};
+    color: ${pink};
 
 
     &:before {
@@ -192,8 +192,8 @@ export const ProjectBtn = styled.button`
     border: none;
     outline: none;
     border-radius: 0px;
-    background: ${green};
-    color: ${pink};
+    background: ${pink};
+    color: ${green};
     transition: all 0.3s ease;
     cursor: pointer;
 

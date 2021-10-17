@@ -1,12 +1,8 @@
-import NailCode from '../../assets/images/NailCode.png';
-import SkillMatch from '../../assets/images/SkillMatch.png';
-import Spaesthetic from '../../assets/images/Spaesthetic.png';
 
 
 const projects = [
     {
         "name": "Spaesthetic",
-        "img":{Spaesthetic},
         "description": "A matchmaking platform for small local businesses and local influencers.",
         "tech": [
             "Conducted research on both small businesses and local influencers’ struggle to grow and provide potential solutions.",
@@ -31,7 +27,6 @@ const projects = [
 
     {
         "name": "NailCode",
-        "img":{NailCode},
         "description": "A press-on nail retail website with multiple product lines.",
         "tech": [
             "Established safe and easy user signup and authentication with hashed passwords.",
@@ -54,7 +49,6 @@ const projects = [
 
     {
         "name": "SkillMatch",
-        "img":{SkillMatch},
         "description": "A matchmaking website for tech recruiters and tech job seekers based on conding languages",
         "tech": [
 

@@ -5,7 +5,6 @@ import NailCode from '../../assets/images/NailCode.png';
 import SkillMatch from '../../assets/images/SkillMatch.png';
 import SuperTeam from '../../assets/images/SuperTeam-macscreen.png';
 import ThreeDaysAtATime from '../../assets/images/3daysatatime-macscreen.png';
-import {Link as LinkRouter } from 'react-router-dom';
 import {
     ProjectSectionContainer,
     ProjectSectionTitle,
