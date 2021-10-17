@@ -22,8 +22,8 @@ const Sidebar = ({ setIsOpen, isOpen }) => {
                 <SidebarLink to='about' onClick={()=>{setIsOpen(false)}}>About</SidebarLink>
                 <SidebarLink to='project' onClick={()=>{setIsOpen(false)}}>Project</SidebarLink>
                 <SidebarLink to='past' onClick={()=>{setIsOpen(false)}}>Past</SidebarLink>
-                <SidebarLink to='passion' onClick={()=>{setIsOpen(false)}}>Passion</SidebarLink>
-                <SidebarLink to='blog' onClick={()=>{setIsOpen(false)}}>Blog</SidebarLink>
+                {/* <SidebarLink to='passion' onClick={()=>{setIsOpen(false)}}>Passion</SidebarLink> */}
+                {/* <SidebarLink to='blog' onClick={()=>{setIsOpen(false)}}>Blog</SidebarLink> */}
                 <SidebarLink to='contact' onClick={()=>{setIsOpen(false)}}>Contact</SidebarLink>
             </SidebarMenu>
 

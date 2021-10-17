@@ -30,7 +30,7 @@ import {
 
 const Project = () => {
     return (
-        <ProjectSectionContainer >
+        <ProjectSectionContainer id='project'>
             <ProjectSectionTitle>Projects</ProjectSectionTitle>
 
             <ProjectContainer >
