@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link as LinkRouter } from 'react-router-dom';
 import {Link as LinkScroll } from 'react-scroll';
 
 const green = '#253f36'; 
@@ -7,7 +6,7 @@ const pink = '#e5b7a8';
 const orange = "#ff7d5b";
 
 export const Nav = styled.nav`
-    background: #253f36;
+    background: ${green};
     height: 80px;
     // margin-top: -80px;
     display: flex;
@@ -34,7 +33,7 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavLogo = styled(LinkScroll)`
-    color:#e5b7a8;
+    color:${pink};
     justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -56,7 +55,7 @@ export const MibileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #e5b7a8;
+        color: ${pink};
     }
 `
 export const NavMenu = styled.ul`
@@ -76,7 +75,7 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkScroll)`
-    color: #e5b7a8;
+    color: ${pink};
     display: flex;
     align-items: center;
     text-decoration: none;

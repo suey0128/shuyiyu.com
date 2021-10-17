@@ -61,7 +61,7 @@ const Project = () => {
 
                             <ProjectCategoryUl>
                                 { projects[0].languages.map(l => 
-                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                    <ProjectCategoryLi key={Object.keys(l)} className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
                                 )}
                             </ProjectCategoryUl>
                         </ProjectBarGrid>
@@ -69,7 +69,7 @@ const Project = () => {
 
                         <ProjectBtnGrid>
                         { projects[0].links.map(l => 
-                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                            <ProjectLink key={Object.keys(l)} href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
                                 <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
                             </ProjectLink>
                         )}
@@ -104,14 +104,14 @@ const Project = () => {
 
                             <ProjectCategoryUl>
                                 { projects[1].languages.map(l => 
-                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                    <ProjectCategoryLi key={Object.keys(l)} className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
                                 )}
                             </ProjectCategoryUl>
                         </ProjectBarGrid>
 
                         <ProjectBtnGrid>
                         { projects[1].links.map(l => 
-                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                            <ProjectLink key={Object.keys(l)} href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
                                 <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
                             </ProjectLink>
                         )}
@@ -146,14 +146,14 @@ const Project = () => {
 
                             <ProjectCategoryUl>
                                 { projects[2].languages.map(l => 
-                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                    <ProjectCategoryLi key={Object.keys(l)} className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
                                 )}
                             </ProjectCategoryUl>
                         </ProjectBarGrid>
 
                         <ProjectBtnGrid>
                         { projects[2].links.map(l => 
-                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                            <ProjectLink key={Object.keys(l)} href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
                                 <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
                             </ProjectLink>
                         )}
@@ -188,14 +188,14 @@ const Project = () => {
 
                             <ProjectCategoryUl>
                                 { projects[3].languages.map(l => 
-                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                    <ProjectCategoryLi key={Object.keys(l)} className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
                                 )}
                             </ProjectCategoryUl>
                         </ProjectBarGrid>
 
                         <ProjectBtnGrid>
                         { projects[3].links.map(l => 
-                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                            <ProjectLink key={Object.keys(l)} href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
                                 <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
                             </ProjectLink>
                         )}
@@ -230,15 +230,15 @@ const Project = () => {
 
                             <ProjectCategoryUl>
                                 { projects[4].languages.map(l => 
-                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                    <ProjectCategoryLi key={Object.keys(l)} className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
                                 )}
                             </ProjectCategoryUl>
                         </ProjectBarGrid>
 
                         <ProjectBtnGrid>
                         { projects[4].links.map(l => 
-                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
-                                <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
+                            <ProjectLink key={Object.keys(l)} href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                                <ProjectBtn  className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
                             </ProjectLink>
                         )}
                         </ProjectBtnGrid>
