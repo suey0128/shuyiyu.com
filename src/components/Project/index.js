@@ -1,99 +1,252 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import ProjectItem from './ProjectItem';
+import projects from './projects';
+import Spaesthetic from '../../assets/images/Spaesthetic.png';
+import NailCode from '../../assets/images/NailCode.png';
+import SkillMatch from '../../assets/images/SkillMatch.png';
+import SuperTeam from '../../assets/images/SuperTeam-macscreen.png';
+import ThreeDaysAtATime from '../../assets/images/3daysatatime-macscreen.png';
+import {Link as LinkRouter } from 'react-router-dom';
+import {
+    ProjectSectionContainer,
+    ProjectSectionTitle,
+    ProjectContainer,
+    ProjectGrid,
+    ProjectImg, 
+    ProjectTitle,
+    ProjectP,
+    ProjectUl,
+    ProjectBarGrid,
+    ProjectH4,
+    ProjectBarChart,
+    BarBlock,
+    ProjectCategoryUl,
+    ProjectCategoryLi,
+    ProjectBtnGrid,
+    ProjectLink,
+    ProjectBtn,
+  
+} from './ProjectElements';
 
-const projects = [
-    {
-        "name": "Spaethethic",
-        "img":"",
-        "description": "A matchmaking platform for small local businesses and local influencers.",
-        "tech": [
-            "Conducted research on both small businesses and local influencers’ struggle to grow and provide potential solutions.",
-            "Developed JavaScript/React/Redux front-end and modeled custom database schema and REST API with Active Record, Postgres, and Ruby on Rails.",
-            "Equipped with searchable listings, various sorting, and personalized filtering mechanisms",
-            "Implemented real-time notification system triggered by actions taken by others that are related to the current user."
-        ],
-        "languages":[
-            {"Ruby": 0.449},
-            {"JavaScript": 0.466},
-            {"CSS": 0.0295},
-            {"HTML": 0.0055}
-        ] ,
-
-    },
-
-    {
-        "name": "NailCode",
-        "img":"",
-        "description": "A press-on nail retail website with multiple product lines.",
-        "tech": [
-            "Established safe and easy user signup and authentication with hashed passwords.",
-            "Provided users login convenience with cookies login.",
-            "Compacted the hosting space needed by designing the backend table incorporating polymorphic relationships",
-            "Formulated a smooth checkout process with a navigation stepper."
-        ],
-        "languages":[
-            {"JavaScript": 0.501},
-            {"Ruby": 0.45},
-            {"CSS": 0.036},
-            {"HTML": 0.013}
-        ] ,
-    },
-
-    {
-        "name": "SkillMatch",
-        "img":"",
-        "description": "A matchmaking website for tech recruiters and tech job seekers based on conding languages",
-        "tech": [
-
-        ],
-        "languages":[
-            {"Ruby": 0.198},
-            {"JavaScript": 0.422},
-            {"CSS": 0.0685},
-            {"HTML": 0.0115}
-        ] ,
-    },
-
-    {
-        "name": "SuperTeam",
-        "img":"",
-        "description": "A Marvel superhero information website for fans to build their superhero teams.",
-        "tech": [
-            "Achieved a dashing, user-friendly, and responsive interface combining CSS and styled-components from Material-UI.",
-            "Provided users with all the Marvel superheroes to choose from by utilizing the Marvel API.",
-            "Stored user information with JSON backend database.",
-        ],
-        "languages":[
-            {"Ruby": 0.198},
-            {"JavaScript": 0.422},
-            {"CSS": 0.0685},
-            {"HTML": 0.0115}
-        ] ,
-    },
-
-    {
-        "name": "3 Days at a Time",
-        "img":"",
-        "description": `A website displays 3 NASA "photo of the day" at one page`,
-        "tech": [
-
-        ],
-        "languages":[
-            {"JavaScript": 0.744},
-            {"CSS": 0.183},
-            {"HTML": 0.073}
-        ] ,
-    },
-];
+// projects[1].links.map(l => console.log(Object.values(l) ))
 
 const Project = () => {
     return (
-        <Container maxWidth="sm" >
-            {projects.map(project=>
-                <ProjectItem key={project.name} project={project} />
-            )}
-        </Container>
+        <ProjectSectionContainer >
+            <ProjectSectionTitle>Projects</ProjectSectionTitle>
+
+            <ProjectContainer >
+                    <ProjectGrid >
+                        <ProjectImg src={Spaesthetic} alt={projects[0].name}/>
+                    </ProjectGrid>
+
+                    <ProjectGrid >
+                        <ProjectTitle>{projects[0].name}</ProjectTitle>
+                        <ProjectP>{projects[0].description}</ProjectP>
+                        <ProjectUl>
+                            <li>Conducted research on both small businesses and local influencers’ struggle to grow and provide potential solutions.</li>
+                            <li>Developed with <span style={{ fontWeight: 'bold' }}>JavaScript/React/Redux </span> front-end and modeled custom database schema and REST API with <span style={{ fontWeight: 'bold' }}>Active Record, Postgres, and Ruby on Rails</span>.</li>
+                            <li>Equipped with searchable listings, various sorting, and personalized filtering mechanisms.</li>
+                            <li>Implemented <span style={{ fontWeight: 'bold' }}>a real-time notification system</span>.</li>
+                        </ProjectUl>
+
+                        {/* barchart https://codepen.io/richardramsay/pen/ZKmQJv */}
+                        <ProjectBarGrid> 
+                            <ProjectH4>Languages</ProjectH4>
+
+                            <ProjectBarChart>
+                                { projects[0].languages.map(l => 
+                                <BarBlock key={Object.keys(l)} className={Object.keys(l)} style={{width:`${(Number(Object.values(l))*100).toFixed(2)}%` }}>
+                                </BarBlock>
+                                )}
+                            </ProjectBarChart>
+
+                            <ProjectCategoryUl>
+                                { projects[0].languages.map(l => 
+                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                )}
+                            </ProjectCategoryUl>
+                        </ProjectBarGrid>
+
+
+                        <ProjectBtnGrid>
+                        { projects[0].links.map(l => 
+                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                                <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
+                            </ProjectLink>
+                        )}
+                        </ProjectBtnGrid>
+                    </ProjectGrid>
+            </ProjectContainer>
+
+            <ProjectContainer >
+                    <ProjectGrid >
+                        <ProjectImg src={NailCode} alt={projects[1].name}/>
+                    </ProjectGrid>
+
+                    <ProjectGrid >
+                        <ProjectTitle>{projects[1].name}</ProjectTitle>
+                        <ProjectP>{projects[1].description}</ProjectP>
+                        <ProjectUl>
+                            <li>Established safe and easy user signup and authentication with <span style={{ fontWeight: 'bold' }}> hashed passwords</span> .</li>
+                            <li>Provided users login convenience with <span style={{ fontWeight: 'bold' }}>cookies login </span>.</li>
+                            <li>Compacted the hosting space needed by designing the backend table incorporating <span style={{ fontWeight: 'bold' }}>polymorphic relationships </span>.</li>
+                            <li>Developed with <span style={{ fontWeight: 'bold' }}>JavaScript/React </span> front-end and modeled custom database schema and REST API with <span style={{ fontWeight: 'bold' }}>Active Record, Postgres, and Ruby on Rails</span>.</li>
+                        </ProjectUl>
+
+                        <ProjectBarGrid> 
+                            <ProjectH4>Languages</ProjectH4>
+
+                            <ProjectBarChart>
+                                { projects[1].languages.map(l => 
+                                <BarBlock key={Object.keys(l)} className={Object.keys(l)} style={{width:`${(Number(Object.values(l))*100).toFixed(2)}%` }}>
+                                </BarBlock>
+                                )}
+                            </ProjectBarChart>
+
+                            <ProjectCategoryUl>
+                                { projects[1].languages.map(l => 
+                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                )}
+                            </ProjectCategoryUl>
+                        </ProjectBarGrid>
+
+                        <ProjectBtnGrid>
+                        { projects[1].links.map(l => 
+                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                                <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
+                            </ProjectLink>
+                        )}
+                        </ProjectBtnGrid>
+                    </ProjectGrid>
+            </ProjectContainer>
+
+            <ProjectContainer >
+                    <ProjectGrid >
+                        <ProjectImg src={SkillMatch} alt={projects[2].name}/>
+                    </ProjectGrid>
+
+                    <ProjectGrid >
+                        <ProjectTitle>{projects[2].name}</ProjectTitle>
+                        <ProjectP>{projects[2].description}</ProjectP>
+                        <ProjectUl>
+                            <li>Achieved a user-friendly and fully responsive interface combining <span style={{ fontWeight: 'bold' }}>CSS </span>and styled components from <span style={{ fontWeight: 'bold' }}>Material-UI</span>.</li>
+                            <li>Designed <span style={{ fontWeight: 'bold' }}> personalized recommendation listing </span> based on the number of skills matched between the recruiter and job seekers for both types of users.</li>
+                            <li>Utilizes <span style={{ fontWeight: 'bold' }}> Redux toolkit</span> to manage all the state variables and debug with efficiency.</li>
+                            <li>Developed with <span style={{ fontWeight: 'bold' }}>JavaScript/React/Redux </span> front-end and modeled custom database schema and REST API with <span style={{ fontWeight: 'bold' }}>Active Record, Postgres, and Ruby on Rails</span>.</li>
+                        </ProjectUl>
+
+                        <ProjectBarGrid> 
+                            <ProjectH4>Languages</ProjectH4>
+
+                            <ProjectBarChart>
+                                { projects[2].languages.map(l => 
+                                <BarBlock key={Object.keys(l)} className={Object.keys(l)} style={{width:`${(Number(Object.values(l))*100).toFixed(2)}%` }}>
+                                </BarBlock>
+                                )}
+                            </ProjectBarChart>
+
+                            <ProjectCategoryUl>
+                                { projects[2].languages.map(l => 
+                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                )}
+                            </ProjectCategoryUl>
+                        </ProjectBarGrid>
+
+                        <ProjectBtnGrid>
+                        { projects[2].links.map(l => 
+                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                                <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
+                            </ProjectLink>
+                        )}
+                        </ProjectBtnGrid>
+                    </ProjectGrid>
+            </ProjectContainer>
+
+            <ProjectContainer >
+                    <ProjectGrid >
+                        <ProjectImg src={SuperTeam} alt={projects[3].name}/>
+                    </ProjectGrid>
+
+                    <ProjectGrid >
+                        <ProjectTitle>{projects[3].name}</ProjectTitle>
+                        <ProjectP>{projects[3].description}</ProjectP>
+                        <ProjectUl>
+                            <li>Provided users all the Marvel superheroes to choose from by utilizing the <span style={{ fontWeight: 'bold' }}>Marvel API</span>.</li>
+                            <li>Stored user information, as well as the team information with <span style={{ fontWeight: 'bold' }}>JSON backend database</span>.</li>
+                            <li>User can create their own superheroes to add to the team</li>
+                            <li>Developed with <span style={{ fontWeight: 'bold' }}>JavaScript/React </span> front-end.</li>
+                        </ProjectUl>
+
+                        <ProjectBarGrid> 
+                            <ProjectH4>Languages</ProjectH4>
+
+                            <ProjectBarChart>
+                                { projects[3].languages.map(l => 
+                                <BarBlock key={Object.keys(l)} className={Object.keys(l)} style={{width:`${(Number(Object.values(l))*100).toFixed(2)}%` }}>
+                                </BarBlock>
+                                )}
+                            </ProjectBarChart>
+
+                            <ProjectCategoryUl>
+                                { projects[3].languages.map(l => 
+                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                )}
+                            </ProjectCategoryUl>
+                        </ProjectBarGrid>
+
+                        <ProjectBtnGrid>
+                        { projects[3].links.map(l => 
+                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                                <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
+                            </ProjectLink>
+                        )}
+                        </ProjectBtnGrid>
+                    </ProjectGrid>
+            </ProjectContainer>
+
+            <ProjectContainer >
+                    <ProjectGrid >
+                        <ProjectImg src={ThreeDaysAtATime} alt={projects[4].name}/>
+                    </ProjectGrid>
+
+                    <ProjectGrid >
+                        <ProjectTitle>{projects[4].name}</ProjectTitle>
+                        <ProjectP>{projects[4].description}</ProjectP>
+                        <ProjectUl>
+                            <li>First project! Full of sentimental value.</li>
+                            <li>Designed “likable” content cards displaying photos and videos fetching from <span style={{ fontWeight: 'bold' }}> NASA Photo of the Day API </span> with <span style={{ fontWeight: 'bold' }}>JavaScript and HTML</span>.</li>
+                            <li>Equipped with searchable listings, various sorting, and personalized filtering mechanisms.</li>
+                            <li>Implemented <span style={{ fontWeight: 'bold' }}>a real-time notification system</span>.</li>
+                        </ProjectUl>
+
+                        <ProjectBarGrid> 
+                            <ProjectH4>Languages</ProjectH4>
+
+                            <ProjectBarChart>
+                                { projects[4].languages.map(l => 
+                                <BarBlock key={Object.keys(l)} className={Object.keys(l)} style={{width:`${(Number(Object.values(l))*100).toFixed(2)}%` }}>
+                                </BarBlock>
+                                )}
+                            </ProjectBarChart>
+
+                            <ProjectCategoryUl>
+                                { projects[4].languages.map(l => 
+                                    <ProjectCategoryLi className={Object.keys(l)}>{Object.keys(l)}:{(Number(Object.values(l))*100).toFixed(2)}% </ProjectCategoryLi>
+                                )}
+                            </ProjectCategoryUl>
+                        </ProjectBarGrid>
+
+                        <ProjectBtnGrid>
+                        { projects[4].links.map(l => 
+                            <ProjectLink href={Object.values(l)[0] !== "" ? Object.values(l) : null} target='_blank' className={Object.values(l)[0] === "" ? "disabled" : null}>
+                                <ProjectBtn className={Object.values(l)[0] === "" ? "disabled" : null} >{Object.keys(l)}</ProjectBtn>
+                            </ProjectLink>
+                        )}
+                        </ProjectBtnGrid>
+                    </ProjectGrid>
+            </ProjectContainer>
+
+        </ProjectSectionContainer>
     )
 }
 
