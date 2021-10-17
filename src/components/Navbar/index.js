@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBars } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa';
 import {Nav, 
         NavbarContainer, 
         NavLogo, 
@@ -7,8 +7,7 @@ import {Nav,
         NavMenu, 
         NavItem, 
         NavLinks,
-    } from './NavbarElements'
-import logo from '../../assets/webprojectLOGO.png';
+    } from './NavbarElements';
 
 
 
