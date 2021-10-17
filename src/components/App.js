@@ -2,9 +2,7 @@ import '../assets/App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import { 
-  BrowserRouter as Router,
-  Switch, 
-  Route
+  BrowserRouter as Router
 } from "react-router-dom";
 import React from "react";
 import Home from '../pages';
