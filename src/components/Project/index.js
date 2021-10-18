@@ -214,8 +214,7 @@ const Project = () => {
                         <ProjectUl>
                             <li>First project! Full of sentimental value.</li>
                             <li>Designed “likable” content cards displaying photos and videos fetching from <span style={{ fontWeight: 'bold' }}> NASA Photo of the Day API </span> with <span style={{ fontWeight: 'bold' }}>JavaScript and HTML</span>.</li>
-                            <li>Equipped with searchable listings, various sorting, and personalized filtering mechanisms.</li>
-                            <li>Implemented <span style={{ fontWeight: 'bold' }}>a real-time notification system</span>.</li>
+                            <li>Optimized user experience with pleasing page design with CSS.</li>
                         </ProjectUl>
 
                         <ProjectBarGrid> 
