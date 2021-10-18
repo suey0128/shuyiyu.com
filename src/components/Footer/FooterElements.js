@@ -8,7 +8,7 @@ const orange = "#ff7d5b";
 export const FooterContainer = styled.footer`
     background: ${green};
     height: 200px;
-    width: 100vw;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 30x;
     color: ${pink};
