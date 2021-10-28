@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link as LinkScroll } from 'react-scroll';
 
 export const AboutContainer = styled.div`
     background: #253f36;
@@ -37,12 +38,17 @@ export const AboutContent = styled.div`
     z-index: 3;
     max-width: 1200px;
     position absolute;
-    padding: 24px 36px;
+    padding: 36px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-item: center;
     background: rgb(37, 63, 54,0.8);
+
+    @media screen and (max-width: 768px) {
+        padding: 24px 36px;
+    }
+
 `
 export const AboutH2 = styled.h2`
     color: #ff7d5b;
@@ -90,10 +96,11 @@ export const AboutP = styled.p`
     }
 `
 
-export const ScrollerWrapper = styled.div`
+export const ScrollerWrapper = styled(LinkScroll)`
     z-index: 3;    
     position:absolute;
     bottom: 8%;
+    cursor: pointer;
 
 `
 

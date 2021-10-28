@@ -32,13 +32,13 @@ export const NavbarContainer = styled.div`
     max-width: 1100px;
 
     @media screen and (max-width: 768px) {
-       justify-content: space-between;
+       justify-content: space-between
     }
 `
 
 export const NavLogo = styled(LinkScroll)`
     color:${pink};
-    justify-self: flex-start;
+    // justify-self: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
     display: flex;
@@ -47,9 +47,6 @@ export const NavLogo = styled(LinkScroll)`
     font-weight: bold;
     text-decoration: none;
 
-    @media screen and (max-width: 768px) {
-        
-    }
 `
 
 export const MibileIcon = styled.div`
@@ -83,6 +80,25 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkScroll)`
+    color: ${pink};
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:active {
+        color:${orange};
+    }
+
+    &:hover {
+        color:${orange};
+    }
+`
+
+export const NavOutsideLinks = styled.a`
     color: ${pink};
     display: flex;
     align-items: center;

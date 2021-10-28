@@ -29,13 +29,11 @@ const About = () => {
                 </AboutP>
             </AboutContent>
 
-            <ScrollerWrapper>
+            <ScrollerWrapper to='project'>
                 <Scroller>
                     <Span></Span>
                     <Span></Span>
                     <Span></Span>
-                    {/* <Span></Span>
-                    <Span></Span> */}
                 </Scroller>
             </ScrollerWrapper>
 
