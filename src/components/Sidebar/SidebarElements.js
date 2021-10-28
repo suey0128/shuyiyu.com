@@ -60,3 +60,21 @@ export const SidebarLink = styled(LinkScroll)`
         justify-content: center;
     }
 `;
+
+export const SidebarOutsideLink = styled.a`
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    list-style:none;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: #e5b7a8;
+    cursor: pointer;
+
+    &:hover {
+        color: #ff7d5b;
+        justify-content: center;
+    }
+`

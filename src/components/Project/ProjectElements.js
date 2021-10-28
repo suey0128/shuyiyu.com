@@ -19,7 +19,7 @@ export const ProjectSectionContainer = styled.div`
 `
 
 export const ProjectContainer = styled.div`
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     background: ${green};
     width: 100%;
     border-radius: 20px;  
