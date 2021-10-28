@@ -36,7 +36,7 @@ const Navbar = ({ setIsOpen }) => {
 
 
                     <NavLogo to='about'>
-                        S
+                        Shuyi
                     </NavLogo>
 
                     <MibileIcon>

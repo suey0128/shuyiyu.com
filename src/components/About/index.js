@@ -8,6 +8,9 @@ import {
     AboutH2,
     AboutH1,
     AboutP,
+    ScrollerWrapper,
+    Scroller,
+    Span
 } from './AboutElements'
 
 const About = () => {
@@ -25,6 +28,16 @@ const About = () => {
                     Have fun viewing my profile and hope to hear from you.
                 </AboutP>
             </AboutContent>
+
+            <ScrollerWrapper>
+                <Scroller>
+                    <Span></Span>
+                    <Span></Span>
+                    <Span></Span>
+                    {/* <Span></Span>
+                    <Span></Span> */}
+                </Scroller>
+            </ScrollerWrapper>
 
         </AboutContainer >
     )

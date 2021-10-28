@@ -30,6 +30,10 @@ export const NavbarContainer = styled.div`
     width: 100%;
     padding: 0, 24px;
     max-width: 1100px;
+
+    @media screen and (max-width: 768px) {
+       justify-content: space-between;
+    }
 `
 
 export const NavLogo = styled(LinkScroll)`
@@ -42,6 +46,10 @@ export const NavLogo = styled(LinkScroll)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+
+    @media screen and (max-width: 768px) {
+        
+    }
 `
 
 export const MibileIcon = styled.div`
