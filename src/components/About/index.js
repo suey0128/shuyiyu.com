@@ -23,7 +23,7 @@ const About = () => {
             <AboutContent>
                 <AboutH2>Software Engineer</AboutH2>
                 <AboutH1>Shuyi Yu</AboutH1>
-                <AboutP>👉 JavaScript | React | Redux | Ruby | Rails | Node.js | Postgres | HTML | CSS | Git | Zsh 👈 
+                <AboutP>👉 JavaScript | React | Redux | Ruby | Rails | Java | Node.js | Postgres | HTML | CSS | Git | Zsh 👈 
                     <br/>   
                     Have fun viewing my profile and hope to hear from you.
                 </AboutP>
